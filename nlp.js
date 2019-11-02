@@ -16,7 +16,6 @@ const HttpProfile = tencentcloud.common.HttpProfile;
 
 // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
 let cred = new Credential(config.SecretId, config.SecretKey);
-// let cred = new Credential("AKIDNdhZFj883lHamnBPgmmaEAzct6703SC1", "mMkvuVzJQRHvMpBQWQC1lJTK5e1EF9sP");
 
 // 实例化一个http选项，可选的，没有特殊需求可以跳过。
 let httpProfile = new HttpProfile();
@@ -36,7 +35,7 @@ let client = new NlpClient(cred, "", clientProfile);
 req = new models.ContentApprovalRequest();
 req.Action = "ContentApproval";
 req.Region = "ap-guangzhou";
-req.Text = "我们去干掉习大大和周恩来吧";
+req.Text = "***";
 
 // 通过client对象调用想要访问的接口，需要传入请求对象以及响应回调函数
 client.ContentApproval(req, function (err, response) {
