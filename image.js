@@ -10,6 +10,7 @@ let idCardImageUrl = 'https://back-1252665534.cos.ap-guangzhou.myqcloud.com/down
 let imgClient = new ImageClient({ AppId, SecretId, SecretKey });
 imgClient.imgPornDetect({
     data: {
+        
         url: idCardImageUrl,
         'Scenes.N': ["TERRORISM", 'POLITICS']
     }
